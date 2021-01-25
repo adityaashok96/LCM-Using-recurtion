@@ -1,0 +1,20 @@
+#include<stdio.h>
+main()
+{
+	int num ,num1;
+	printf("Enter first number :\t");
+	scanf("%d",&num);
+	printf("Enter second number :\t");
+	scanf("%d",&num1);
+	printf("The LCM of and is:\t %d",LCM(num,num1));
+}
+int LCM (int a, int b)
+{
+	static int m=0;
+	m=m+b;
+	if(m%a==0 && m%b==0)
+	{
+		return m;
+	}
+	return LCM(a,b);
+}
